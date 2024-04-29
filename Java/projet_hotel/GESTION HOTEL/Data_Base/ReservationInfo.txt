@@ -1,0 +1,16 @@
+
+Reservation: 
+ Reservation Number = 1
+ Client = 
+	Last Name: bout
+	First Name: mouad
+	Age: 15
+	Address: rabat
+	Contact: 6552336
+	ID Number: a45a4788
+ Room Number = 268
+ Date = 15/4/2026
+ Duration of Stay = 20
+ Price = 150.0 Dhs
+ Payment Method = Cash Payment
+=====================================================
