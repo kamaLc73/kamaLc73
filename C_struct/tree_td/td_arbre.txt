@@ -1,0 +1,24 @@
+Soit la séquence d'entiers suivante : 12, 8, 23, 78, 9, 10, 20, -2, -77, 9.
+A partir de cette séquence nous construisons l'arbre binaire suivant :
+
+1-Déclarer la structure 'ArbreBinaire' qui permet de traiter ce problème.
+2-Développer la fonction 'menu' qui présente les fonctionnalités de ce programme. Elle retourne le choix de
+l'utilisateur.
+3-Développer la fonction 'creerElement' qui permet de (1) crée un élément (2) remplir cet élément par les
+données saisies par l'utilisateur, et (3) retourner l'adresse de l'élément créé.
+4-Développer la fonction 'insererElement' qui qui permet d'insérer un élément dans l'arbre.
+5-Developper la fonction 'creerArbre' qui, a partir d'une collection d'entiers choisie par l'utilisateur, construit
+un arbre.
+6-Développer la fonction 'afficherCroissant' qui affiche les éléments de l'arbre dans l'ordre croissant.
+7-Développer la fonction 'afficherDecroissant' qui affiche les éléments de l'arbre dans l'ordre décroissant.
+8-Développer la fonction 'nbEelements' qui calcule le nombre de nœuds d'un arbre.
+9-Développer la fonction 'nbFeuillesʼ qui calcule le nombre de feuilles d'un arbre.
+10-Développer la fonction 'afficherFeuilles' qui affiche les feuilles de l'arbre dans l'ordre croissant.
+11-Développer la fonction 'calculerProfondeur' qui calcule le nombre de niveaux de l'arbre.
+12-Développer la fonction booléenne 'chercherElement' qui cherche un élément dans l'arbre. La valeur
+recherchée est passée en paramètre.
+13-Développer la fonction 'supprimerElement' qui permet de supprimer un nœud (s'il existe) de l'arbre.
+14-Développer la fonction 'enregistrerArbreFichier' qui enregistre un arbre dans un fichier. Le chemin du
+fichier est passé en paramètres.
+15-Développer la fonction 'initialiserArbreFichier' qui crée un arbre à partir du contenu d'un fichier.
+16-Développer la fonction 'main' permettant de tester toutes les fonctions développées précédemment.
