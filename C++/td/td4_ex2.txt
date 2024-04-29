@@ -1,0 +1,83 @@
+#include <iostream>
+using namespace std ;
+class fleur{
+    string espece ;
+    string couleur ;
+    double prix_base;
+    bool parfumee;
+    bool promotion;
+    public :
+    fleur(string ="",string="",double=0,bool=false,bool=false);
+    string getcouleur();
+    string getespece();
+    double getprix();
+    bool getparfume();
+    bool getpromotion();
+    void setespece(string);
+    void setcouleur(string);
+    void setprix(double);
+    void setparufme(bool);
+    void setpromotion(bool);
+    void afficher();
+    double prix();
+    bool operator ==(fleur);
+};
+fleur ::fleur(string a,string b ,double c ,bool d,bool e){
+    couleur = a;espece =b;prix_base=c;promotion=d;parfumee=e;
+}
+string fleur ::getcouleur(){return couleur;}
+string fleur ::getespece(){return espece;}
+void fleur ::afficher(){
+    cout<<"espece :"<<espece<<endl<<
+    "couleur :"<<couleur<<endl<<
+    "prix_base :"<<prix_base<<endl<<
+    "parfumee :"<<parfumee<<endl;
+
+}
+double fleur ::prix(){
+    if(promotion)return prix_base/2;
+    return prix_base;
+}
+bool fleur ::operator ==(fleur a){
+    return (couleur ==a.couleur)&&
+            (espece ==a.espece) &&
+            (parfumee ==a.parfumee)&&
+            (prix_base ==a.prix_base)&&
+            (promotion ==a.promotion);
+}
+class bouquet{
+    fleur tab[10];
+    int size ;
+    
+    public :
+    bouquet(fleur tabf [3]=NULL){
+        tab[0]=tabf[0];
+        tab[1]=tabf[1];
+        tab[2]=tabf[2];
+        size=3;
+    };
+    bool parfum(){
+        return tab[0].getparfume() ||
+            tab[1].getparfume() ||
+            tab[2].getparfume();
+    };
+    double  prixB(){
+        if(parfum()){
+            return 2*(tab[0].getprix()+tab[1].getprix()+tab[2].getprix());
+
+        }
+        else return tab[0].getprix()+tab[1].getprix()+tab[2].getprix() ;
+        
+    }
+    void operator +=(fleur f){
+        tab[size]=f;
+        size++;
+
+    }
+};
+int main(){
+    fleur *tabf = new fleur[3];
+     tabf[0]=fleur("rouge","violet",1200,true,true);
+     tabf[0].afficher();
+     bouquet(tabf);
+}

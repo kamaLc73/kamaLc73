@@ -1,0 +1,118 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+class Fleur {
+private:
+    string espece;
+    string couleur;
+    double prix_base;
+    bool parfum;
+    bool promotion;
+
+public:
+    Fleur() : espece(""), couleur(""), prix_base(0), parfum(false), promotion(true) {}
+
+    Fleur(const string& esp, const string& col, double prix, bool parf, bool promo = true)
+        : espece(esp), couleur(col), prix_base(prix), parfum(parf), promotion(promo) {}
+
+    string getCouleur() const { return couleur; }
+    string getEspece() const { return espece; }
+
+    double prix() const {
+        if (promotion == true)
+            return prix_base / 2;
+        return prix_base;
+    }
+
+    void afficher() const {
+        cout << "Espece de la fleur : " << espece << ", Sa couleur : " << couleur << endl;
+    }
+
+    bool estParfumee() const {
+        return parfum;
+    }
+
+    bool operator==(const Fleur& other) const {
+        return this->espece == other.espece && this->couleur == other.couleur;
+    }
+};
+
+class Bouquet {
+    Fleur* fleurs;
+    size_t size;
+    size_t capacity;
+
+public:
+    Bouquet(const Fleur* initialFlowers, size_t initialSize) : size(initialSize), capacity(initialSize + 5) {
+        fleurs = new Fleur[capacity];
+        for (size_t i = 0; i < initialSize; ++i) {
+            fleurs[i] = initialFlowers[i];
+        }
+    }
+
+    ~Bouquet() {
+        delete[] fleurs;
+    }
+
+    bool parfum() const {
+        for (size_t i = 0; i < size; ++i) {
+            if (fleurs[i].estParfumee()) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    void ajouterFleur(const Fleur& fleur) {
+        if (size == capacity) {
+            // If the array is full, increase its capacity
+            capacity += 5;
+            Fleur* newFleurs = new Fleur[capacity];
+            for (size_t i = 0; i < size; ++i) {
+                newFleurs[i] = fleurs[i];
+            }
+            delete[] fleurs;
+            fleurs = newFleurs;
+        }
+        fleurs[size++] = fleur;
+    }
+
+    double prix() const {
+        double price = 0;
+        for (size_t i = 0; i < size; ++i) {
+            price += fleurs[i].prix();
+        }
+        return parfum() ? price * 2.0 : price;
+    }
+
+    Bouquet& operator+=(const Fleur& f) {
+        ajouterFleur(f);
+        return *this;
+    }
+
+    void afficherBouquet() const {
+        cout << "Le bouquet contient les fleurs suivantes :" << endl;
+        for (size_t i = 0; i < size; ++i) {
+            fleurs[i].afficher();
+        }
+    }
+};
+
+int main() {
+    Fleur rose("Rose", "Rouge", 2.5, true, true);
+    Fleur tulipe("Tulipe", "Jaune", 1.8, false, false);
+    Fleur orchidee("Orchidee", "Blanche", 3.2, true, false);
+
+    Fleur initialFlowers[] = { rose, tulipe };
+    Bouquet bouquet(initialFlowers, 2);
+    bouquet += orchidee;
+
+    cout << "Le bouquet a un parfum : " << (bouquet.parfum() ? "Oui" : "Non") << endl;
+    cout << "Le prix du bouquet est : " << bouquet.prix() << " euros." << endl;
+
+    // Afficher le bouquet
+    bouquet.afficherBouquet();
+
+    return 0;
+}

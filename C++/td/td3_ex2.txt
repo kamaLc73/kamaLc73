@@ -1,0 +1,92 @@
+#include<iostream>;
+
+ using namespace std ;
+ class date{
+     int mois ;
+     int annee;
+     int jour ;
+     public :
+     date();
+     date(int,int,int);
+     void saisie();
+     void afficher();
+     friend class employe ;
+ };
+ void date ::saisie(){
+     cout <<"entrer date d'embauche :(annee-mois-jour)";
+     cin >>annee;
+     cin >>mois;
+     cin >>jour;
+ }
+ void date ::afficher(){
+     cout <<"date d'embauche :(annee-mois-jour)";
+     cout<<annee<<"-"<<mois<<"-"<<jour;  
+ } 
+ class employe{
+     int code ;
+     string nom ;
+     date date_embauche;
+     int nombre_heure;
+     float taux ;
+     public :
+     employe();
+     employe(int,string,date,int,float);
+     void saisie();
+     void afficher();
+     float calc_salaire();
+ };
+ class vendeur  :public employe{
+     float pourcentage ;
+     float montant ;
+     public :
+     vendeur();
+     vendeur(int,string,date,int,float,float,float);
+     void saisie();
+     void afficher();
+     float calc_salaire();
+ };
+ employe ::employe(){
+     code =-1;
+     nom =""; 
+      date date_embauche;
+     nombre_heure =0;
+     taux = 0 ;
+ }
+ employe ::employe(int c,string n ,date d , int nh, float t){
+     code =c;
+     nom =n;
+     date_embauche=d;
+     nombre_heure =nh;
+     taux = t ;
+ }
+ void employe :: saisie(){
+     cout <<"entrer code :";
+     cin >>code;
+     cout <<"entrer nom :";
+     cin >>nom;
+     date_embauche.saisie() ;
+     cout <<"entrer nombre d'heure:";
+     cin >>nombre_heure;
+     cout <<"entrer taux de renumeration : ";
+     cin >>taux ; 
+ }
+ void employe :: afficher(){
+     cout <<"code :"<<code<<","
+         <<"nom :"<<nom <<" ,"
+         <<"nombre d'heures :"<<nombre_heure<<","
+         <<"taux de renum :"<<taux<<endl;
+     date_embauche.afficher();
+ }
+ float employe :: calc_salaire(){
+     return nombre_heure*taux;
+ }
+ void vendeur::saisie(){
+     employe ::saisie();
+     cout <<"entrer pourcentage :" ;
+     cin>>pourcentage;
+     cout <<" \n entrer montant de vente ";
+     cin >>montant ;
+ }
+ float vendeur::calc_salaire(){
+     return employe::calc_salaire()+montant*pourcentage;
+ }
