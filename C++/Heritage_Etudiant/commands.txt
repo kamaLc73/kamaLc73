@@ -1,0 +1,7 @@
+g++ -c Etudiant.cpp -o Etudiant.o
+g++ -c Etudiant_en_Maitrise.cpp -o Etudiant_en_Maitrise.o
+g++ -c Main.cpp -o Main.o
+g++ Etudiant.o Etudiant_en_Maitrise.o Main.o -o program
+
+
+g++ -c Etudiant.cpp ; g++ -c Etudiant_en_Maitrise.cpp ; g++ -c Main.cpp ; g++ Etudiant.o Etudiant_en_Maitrise.o Main.o -o program

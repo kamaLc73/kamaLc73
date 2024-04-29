@@ -1,0 +1,26 @@
+#include <iostream>
+#include <string>
+
+class Etudiant_en_Maitrise : public Etudiant {
+	int note_memoire;
+	public:
+		void saisie(){
+			Etudiant::saisie();
+			cout<<"Note Memoire :"<<endl;
+			cin>>note_memoire; 	
+		}
+		void affichage (){
+			Etudiant_en_Maitrise::affichage();
+			cout<<"Note Memoire : "<<note_memoire<<endl;
+		}
+		float moyenne (){
+			Etudiant::moyenne();
+			return moyenne()+(note_memoire/3.0);	
+			
+		}
+	
+	
+	
+	
+	
+};

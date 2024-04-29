@@ -1,0 +1,65 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+class Etudiant {
+    string nom;
+    string prenom;
+    int tabnotes[3]; 
+public:
+    void saisie(){
+	cout << "Nom de l'etudiant : ";
+    cin >> nom;
+    cout << "Prenom de l'etudiant : ";
+    cin >> prenom;
+	cout << "Saisie des notes (3 notes au total) :\n";
+    for (int i = 0; i < 3; ++i) {
+        cout << "Note " << i + 1 << " : ";
+        cin >> tabnotes[i];
+	}		
+	};
+    void affichage(){
+    	cout << nom << " " << prenom << endl;	
+	};
+    float moyenne(){
+    	int sum = 0;
+   		for (int i = 0; i < 3; i++) {
+        sum = sum + tabnotes[i];
+    	}
+    return sum/ 3.0;	
+	}; 
+    int admis(){
+    	if (Etudiant::moyenne() > 10.0) 
+        	return 1;
+    	else 
+       		return 0;  
+    	
+	};
+	int exae_quo(Etudiant E){
+		if (E.moyenne() == moyenne()) {
+        	return 1;
+    	} else {
+        	return 0;
+    }
+	};
+};
+int main() {
+
+    Etudiant E1;
+    E1.saisie();
+    E1.affichage();
+    cout << "Moyenne : " << E1.moyenne() << endl;
+    cout << "Admis : " << E1.admis() << endl;
+
+    Etudiant E2;
+    E2.saisie();
+    E2.affichage();
+    cout << "Moyenne : " << E2.moyenne() << endl;
+    cout << "Admis : " << E2.admis() << endl;
+
+    cout << "Ex aequo : " << E1.exae_quo(E2) << endl;
+
+    return 0;
+}
+
