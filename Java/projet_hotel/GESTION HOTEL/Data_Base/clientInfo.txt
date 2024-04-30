@@ -1,8 +1,0 @@
-
-	Last Name: bout
-	First Name: mouad
-	Age: 15
-	Address: rabat
-	Contact: 6552336
-	ID Number: a45a4788
-=====================================================
