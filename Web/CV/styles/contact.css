@@ -19,6 +19,7 @@
 #main p {
     margin-bottom: 15px;
 }
+
 .contact-info,
 .social-media {
     margin-bottom: 20px;
@@ -34,7 +35,7 @@
     padding: 20px 0;
 }
 
-.social-media{
+.social-media {
     text-align: center;
 }
 
@@ -47,7 +48,7 @@
 }
 
 .social-media a:hover {
-    text-decoration: solid;
+    text-decoration: underline; /* Corrected property name */
 }
 
 .return {
@@ -59,4 +60,11 @@
     background-color: #007bff;
     color: white;
     text-decoration: none;
+}
+
+/* Media query for iPhones */
+@media only screen and (max-width: 768px) {
+    #main {
+        max-width: 90%; /* Adjust maximum width for smaller screens */
+    }
 }

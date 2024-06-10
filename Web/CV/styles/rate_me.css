@@ -1,3 +1,4 @@
+/* Default styles */
 #header {
     background-color: #333;
     text-align: center;
@@ -5,9 +6,10 @@
     padding: 20px 0;
 }
 
-#main{
+#main {
     max-width: 700px;
-    max-height: 750px;
+    margin: 0 auto; /* Center the element horizontally */
+    padding: 0 20px; /* Add padding to the sides */
 }
 
 #footer {
@@ -28,8 +30,18 @@
 
 .return a {
     background-color: #007bff;
-    text-decoration: none;*
+    text-decoration: none;
     color: white;
 }
 
+/* Media query for iPhones */
+@media only screen and (max-width: 768px) {
+    #main {
+        max-width: 90%; /* Adjust maximum width for smaller screens */
+        padding: 0 10px; /* Adjust padding for smaller screens */
+    }
 
+    .return {
+        margin-top: 10px;
+    }
+}

@@ -1,3 +1,4 @@
+/* Default styles */
 #header {
     background-color: #333;
     text-align: center;
@@ -63,6 +64,22 @@
 
 .return a {
     background-color: #007bff;
-    text-decoration: none;*
+    text-decoration: none;
     color: white;
+}
+
+/* Media query for iPhones */
+@media only screen and (max-width: 768px) {
+    #main {
+        padding: 10px;
+    }
+
+    .projects-table th,
+    .projects-table td {
+        padding: 8px;
+    }
+
+    .return {
+        margin-top: 10px;
+    }
 }

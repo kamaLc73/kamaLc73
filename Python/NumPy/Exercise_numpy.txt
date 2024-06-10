@@ -1,0 +1,357 @@
+----Exercise:
+
+ Understanding NumPy Indexing and Slicing
+In this exercise, you will work with a NumPy array and perform various indexing and slicing operations. Please follow the instructions and predict the output of each operation before running the code.
+
+import numpy as np
+
+# Create a 1D array from 0 to 15
+# Reshape the array into a 4x4 matrix
+# Print the entire 4x4 matrix
+print("Original Matrix:")
+# Expected Output:
+# [[ 0  1  2  3]
+#  [ 4  5  6  7]
+#  [ 8  9 10 11]
+#  [12 13 14 15]]
+
+# Perform different indexing and slicing operations
+# Predict the output for each operation before running the code.
+
+# 1. Access the second column of the matrix
+print("Second Column:")
+# Expected Output:
+# [ 1  5  9 13]
+
+# 2. Access the second row of the matrix
+print("Second Row:")
+
+# Expected Output:
+# [ 4  5  6  7]
+
+# 3. Access every other element in the second row
+print("Every Other Element in the Second Row:")
+# Expected Output:
+# [4 6]
+# 4. Access all columns except the last one
+print("All Columns Except the Last One:")
+# Expected Output:
+# [[ 0  1  2]
+#  [ 4  5  6]
+#  [ 8  9 10]
+#  [12 13 14]]
+
+# 5. Access all rows except the last one 
+# Expected Output:
+# [[ 0  1  2  3]
+#  [ 4  5  6  7]
+#  [ 8  9 10 11]]
+
+
+----Correction
+
+
+
+import numpy as np
+
+# Create a 1D array from 0 to 15
+a = np.arange(16)
+
+# Reshape the array into a 4x4 matrix
+a = a.reshape((4, 4))
+
+# Print the entire 4x4 matrix
+print("Original Matrix:")
+print(a)
+# Expected Output:
+# [[ 0  1  2  3]
+#  [ 4  5  6  7]
+#  [ 8  9 10 11]
+#  [12 13 14 15]]
+
+# Perform different indexing and slicing operations
+# Predict the output for each operation before running the code.
+
+# 1. Access the second column of the matrix
+print("Second Column:")
+print(a[:, 1])
+# Expected Output:
+# [ 1  5  9 13]
+
+# 2. Access the second row of the matrix
+print("Second Row:")
+print(a[1, :])
+# Expected Output:
+# [ 4  5  6  7]
+
+# 3. Access every other element in the second row
+print("Every Other Element in the Second Row:")
+print(a[1, ::2])
+# Expected Output:
+# [4 6]
+
+# 4. Access all columns except the last one
+print("All Columns Except the Last One:")
+print(a[:, :-1])
+# Expected Output:
+# [[ 0  1  2]
+#  [ 4  5  6]
+#  [ 8  9 10]
+#  [12 13 14]]
+
+# 5. Access all rows except the last one (same as a[:-1, :])
+print("All Rows Except the Last One:")
+print(a[:-1])
+# Expected Output:
+# [[ 0  1  2  3]
+#  [ 4  5  6  7]
+#  [ 8  9 10 11]]
+
+----------------------------------------------------------------------
+
+
+----Exercise:
+
+
+ NumPy Indexing with a Boolean Array
+In this exercise, you will work with a NumPy array and a corresponding Boolean array to perform indexing and selection based on Boolean values. Please follow the instructions and predict the output of the code before running it.
+
+import numpy as np
+# Create a 1D array from 0 to 8
+# Reshape the array into a 3x3 matrix
+# Print the original 3x3 matrix
+# Expected Output:
+# [[0 1 2]
+#  [3 4 5]
+#  [6 7 8]]
+# Create a Boolean array 'b' with the same shape as 'a'
+b = 
+# Use the Boolean array 'b' to index 'a' and select values
+selected_values =……
+
+# Print the flattened array with selected values from 'a'
+print("Selected Values from 'a' using Boolean Indexing:")
+print(selected_values)
+# Expected Output:
+# [0 4 8]
+
+ 
+
+----Correction :
+
+
+
+import numpy as np
+
+# Create a 1D array from 0 to 8
+a = np.arange(9)
+
+# Reshape the array into a 3x3 matrix
+a = a.reshape((3, 3))
+
+# Print the original 3x3 matrix
+print("Original Matrix 'a':")
+print(a)
+# Expected Output:
+# [[0 1 2]
+#  [3 4 5]
+#  [6 7 8]]
+
+# Create a Boolean array 'b' with the same shape as 'a'
+b = np.array(
+    [[True, False, False],
+     [False, True, False],
+     [False, False, True]])
+
+# Use the Boolean array 'b' to index 'a' and select values
+selected_values = a[b]
+
+# Print the flattened array with selected values from 'a'
+print("Selected Values from 'a' using Boolean Indexing:")
+print(selected_values)
+# Expected Output:
+# [0 4 8]
+
+-------------------------------------------------------------------
+
+----Exercise:
+
+
+ Identifying Absent Students in Quiz Results
+In this exercise, you will work with a dataset of students' quiz results, where NaN values represent students who were absent during the quiz. Your task is to write a Python script to identify and count the number of absent students.
+Please complete the code and run it to find the number of students who were absent.
+import numpy as np
+
+# Students' quiz results.
+# NaN for students that were absent.
+data = np.array([10, 3, np.NaN, 7, np.NaN, 5])
+
+# Write code to count the number of absent students (students with NaN results).
+# Use the function to check for NaN values in the 'data' array.
+
+# Print the number of absent students.
+print("Number of absent students:", students_absent)
+
+
+
+
+----Correction :
+
+
+import numpy as np
+
+# Students' quiz results.
+# NaN for students that were absent.
+data = np.array([10, 3, np.NaN, 7, np.NaN, 5])
+students_present = 0
+students_absent = 0
+
+# Write code to count the number of absent students (students with NaN results).
+# Use the np.isnan() function to check for NaN values in the 'data' array.
+
+for result in data:
+    if np.isnan(result):
+        students_absent += 1
+    else:
+        students_present += 1
+
+# Print the number of absent students.
+print("Number of absent students:", students_absent)
+
+----------------------------------------------------------------------
+
+
+----Exercise:
+
+
+ Comparing Salary Changes
+In this exercise, you have salary data for different job positions over three years and their corresponding salary increases. Your task is to calculate the updated salaries after applying the increases and then compare the salary change for a specific position.
+Please complete the code and run it to determine if the salary for the "designer" position increased in the first year.
+
+import numpy as np
+
+# Salary in ($1000) for different job positions [2015, 2016, 2017]
+dataScientist = [133, 132, 137]
+productManager = [127, 140, 145]
+designer = [118, 118, 127]
+softwareEngineer = [129, 131, 137]
+
+# Create a matrix 'S' to represent the salaries for each job position
+
+# Create a matrix 'I' to represent the salary increases for each position
+
+# Calculate the updated salaries 
+
+
+# Print the updated salaries matrix
+print("Updated Salaries:")
+print(S2)
+
+# Check if the salary for the "designer" position increased in the first year (2016)
+
+
+
+----Correction :
+
+
+import numpy as np
+
+# Salary in ($1000) for different job positions [2015, 2016, 2017]
+dataScientist = [133, 132, 137]
+productManager = [127, 140, 145]
+designer = [118, 118, 127]
+softwareEngineer = [129, 131, 137]
+
+# Create a matrix 'S' to represent the salaries for each job position
+S = np.array([dataScientist, productManager, designer, softwareEngineer])
+
+# Create a matrix 'I' to represent the salary increases for each position
+I = np.array([[1.1, 1.2, 1.3], [1.0, 1.0, 1.0], [0.9, 0.8, 0.7], [1.1, 1.1, 1.1]])
+
+# Calculate the updated salaries by multiplying 'S' and 'I'
+S2 = S * I
+
+# Print the updated salaries matrix
+print("Updated Salaries:")
+print(S2)
+
+# Check if the salary for the "designer" position increased in the first year (2016)
+if S2[2][0] > S[2][0]:
+    print("The salary for the 'designer' position increased in the first year (2016).")
+else:
+    print("The salary for the 'designer' position did not increase in the first year.")
+The multiplication operator ‘*’ creates a new matrix by multiplying the two values at position (i,j) of the two matrices. We call this the Hadamard Product. This often leads to confusion because NumPy beginners expect this to be standard matrix multiplication: multiply the i-throw of the first matrix with the j-th column of the second matrix
+
+----------------------------------------------------------------------
+
+
+----Exercise: 
+
+
+Calculating Salary Increase for Data Scientists
+In this exercise, you have salary data for different job positions over three years, and you want to calculate the updated salaries for data scientists after applying a salary raise. Your task is to compute the updated salary for data scientists in the first year and print it as an integer.
+Please complete the code and run it to find the updated salary for data scientists in the first year.
+
+import numpy as np
+
+# Salary in ($1000) for different job positions [2015, 2016, 2017]
+dataScientist = [130, 132, 137]
+productManager = [127, 140, 145]
+designer = [118, 118, 127]
+softwareEngineer = [129, 131, 137]
+
+# Create a matrix 'A' to represent the salaries for each job position
+
+# Create a matrix 'B' to represent the salary raise (10%) for data scientists
+
+# Calculate the updated salaries for data scientists 
+
+# Print the updated salary for data scientists in the first year (2016) as an integer
+
+
+----Correction
+
+
+import numpy as np
+
+# Salary in ($1000) for different job positions [2015, 2016, 2017]
+dataScientist = [130, 132, 137]
+productManager = [127, 140, 145]
+designer = [118, 118, 127]
+softwareEngineer = [129, 131, 137]
+
+# Create a matrix 'A' to represent the salaries for each job position
+A = np.array([dataScientist,
+productManager,
+designer,
+softwareEngineer])
+# Create a matrix 'B' to represent the salary raise (10%) for data scientists
+B = np.ones((4, 1))
+B[0] = 1.1
+
+# Calculate the updated salaries for data scientists by multiplying 'A' and 'B'
+C = A * B
+
+# Print the updated salary for data scientists in the first year (2016) as an integer
+print("Updated Salary for Data Scientists in 2016:", int(C[0][0]))
+
+
+
+
+----------------------------------------------------------------
+
+
+----Puzzles : 
+
+import numpy as np
+# save $122.50 per month
+x = 122.5
+net_wealth = np.arange(0, 1000, x)
+# how long to save >$1000?
+print(len(net_wealth))
+------------------------------------
+import numpy as np
+year = np.linspace(0, 365, 366)
+print(int(year[-1] - year[-2]))
+------------------------------------
+
