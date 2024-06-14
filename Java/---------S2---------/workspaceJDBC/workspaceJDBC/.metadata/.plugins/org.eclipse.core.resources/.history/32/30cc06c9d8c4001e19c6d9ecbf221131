@@ -1,0 +1,15 @@
+package com.java.utils;
+
+import java.sql.Connection;
+
+import com.java.jdbc.DataSource;
+import com.java.jdbc.MySQLDataSource;
+
+public class Test {
+	
+	public static void main(String[] args) {
+		DataSource ds = new MySQLDataSource("india");
+		Connection cnx = ds.getConnection();
+	}
+
+}

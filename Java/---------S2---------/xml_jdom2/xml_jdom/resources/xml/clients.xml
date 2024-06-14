@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<clients>
+  <client id="1">
+    <nom>Alaoui</nom>
+    <prenom>Ali</prenom>
+  </client>
+  <client id="2">
+    <nom>IDrissi</nom>
+    <prenom>Idriss</prenom>
+  </client>
+</clients>
+

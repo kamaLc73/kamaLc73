@@ -1,0 +1,44 @@
+package com.java.jdbc;
+
+import java.sql.Connection;
+
+public class DataBase {
+	private DataSource ds;
+	private Connection cnx;
+	
+	public DataBase() {
+	}
+
+	public DataBase(DataSource ds) {
+		this.ds = ds;
+		this.cnx = ds.getConnection();
+	}
+
+	public DataSource getDs() {
+		return ds;
+	}
+
+	public void setDs(DataSource ds) {
+		this.ds = ds;
+		this.cnx = ds.getConnection();
+	}
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+
+
+
+}

@@ -1,0 +1,67 @@
+package com.java.jdbc;
+
+import java.sql.Connection;
+import java.sql.Statement;
+
+import com.java.beans.Document;
+
+public class DataBase {
+	private DataSource ds;
+	private Connection cnx;
+	
+	public DataBase() {
+	}
+
+	public DataBase(DataSource ds) {
+		this.ds = ds;
+		this.cnx = ds.getConnection();
+	}
+
+	public DataSource getDs() {
+		return ds;
+	}
+
+	public void setDs(DataSource ds) {
+		this.ds = ds;
+		this.cnx = ds.getConnection();
+	}
+
+	public int insertDocument(Document d) {
+		try {
+			//formulation de la req
+			String req = "insert into document values(" + d.getId() + ", '" 
+					+ d.getName() + "', " + d.getPageCount() + ");" ;
+			//Creation objet stat
+			Statement st = cnx.createStatement();
+			return st.executeUpdate(req);
+		} catch (Exception e) {
+			e.printStackTrace();
+			return -1;
+		}
+	}
+	
+	public Document selectDocument(int id ) {
+		try {
+			String req = "select * from document where id = " + id + ";";
+			Statement st = cnx.createStatement();
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+
+
+
+}

@@ -1,0 +1,20 @@
+package com.java.utils;
+
+import java.sql.Connection;
+
+import com.java.beans.Document;
+import com.java.jdbc.DataBase;
+import com.java.jdbc.DataSource;
+import com.java.jdbc.MySQLDataSource;
+
+public class Test {
+	
+	public static void main(String[] args) {
+//		DataSource ds = new MySQLDataSource("india");
+//		Connection cnx = ds.getConnection();
+		DataBase db = new DataBase(new MySQLDataSource("india"));
+		Document d = new Document(1, "Doc 01", 100);
+		System.out.println(db.insertDocument(d));
+	}
+
+}
