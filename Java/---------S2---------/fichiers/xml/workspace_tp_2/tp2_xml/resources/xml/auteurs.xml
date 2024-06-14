@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<auteurs>
+  <auteur id="1">
+    <nom>ahmed</nom>
+    <prenom>idrissi</prenom>
+  </auteur>
+  <auteur id="2">
+    <nom>karim</nom>
+    <prenom>alaoui</prenom>
+  </auteur>
+</auteurs>

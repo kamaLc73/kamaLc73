@@ -1,0 +1,11 @@
+package Threads_Test;
+
+public class Main {
+	
+	public static void main(String[] args) throws Exception {
+		
+		Thread t0 = new Thread(new Run_interface()); // Or MyThread t0 = new Mythread();
+		
+		t0.start();
+	}
+}

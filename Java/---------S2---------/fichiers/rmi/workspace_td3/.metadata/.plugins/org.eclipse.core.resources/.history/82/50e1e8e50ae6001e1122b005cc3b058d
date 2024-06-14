@@ -1,0 +1,9 @@
+package rmi;
+
+import java.rmi.Remote;
+import beans.*;
+
+public interface RemoteHotelReservertion extends Remote{
+	public int reserver(HotelReservation hr) throw Remo; 
+}
+ 

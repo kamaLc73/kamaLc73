@@ -1,0 +1,25 @@
+package Test;
+
+public class Run_interface_2 implements Runnable{
+	public Run_interface_2() {
+	}
+	public static void main(String[] args) {
+		Run_interface_2 r  = new Run_interface_2();
+		Thread t1 = new Thread(r);
+		Thread t2 = new Thread(r);
+		t1.start();
+		t2.start();
+	} 
+	@Override
+	public void run() {
+		for (int i = 0; i <= 5; i++) {
+			System.out.println(i + " : " + Thread.currentThread().getName());
+			try {
+				Thread.sleep(1000);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		}
+	}
+
+}

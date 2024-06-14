@@ -1,0 +1,8 @@
+content_assist_lru_history=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><history maxLHS\="100" maxRHS\="10"><lhs name\="beans.HotelReservation"><rhs name\="beans.HotelReservation"/></lhs><lhs name\="beans.Personne"><rhs name\="beans.Personne"/></lhs><lhs name\="jdbc.DataBase"><rhs name\="jdbc.DataBase"/></lhs><lhs name\="jdbc.DataSource"><rhs name\="jdbc.MySQLDataSource"/></lhs><lhs name\="beans.Temperature"><rhs name\="beans.Temperature"/></lhs><lhs name\="java.rmi.Remote"><rhs name\="rmi.TemperatureSensor"/></lhs><lhs name\="rmi.TemperatureSensorInterface"><rhs name\="rmi.TemperatureSensor"/></lhs></history>
+content_assist_number_of_computers=12
+eclipse.preferences.version=1
+org.eclipse.jdt.ui.formatterprofiles.version=22
+spelling_locale_initialized=true
+typefilter_migrated_2=true
+useAnnotationsPrefPage=true
+useQuickDiffPrefPage=true

@@ -1,0 +1,5 @@
+package Threads_Test;
+
+public class MyThread extends Thread {
+
+}

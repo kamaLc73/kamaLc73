@@ -1,0 +1,23 @@
+package Threads_Test;
+
+public class Run_interface implements Runnable{
+	
+	public Run_interface() {
+	}
+	@Override
+	public void run() {
+		System.out.println(Thread.currentThread().getName()+ " started.");
+		for (int i = 0; i < 3; i++) {
+			try {
+				System.out.print(Thread.currentThread().getName()+ " --> " + i + " \n");
+				Thread.sleep(1000);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		}
+		System.out.println(Thread.currentThread().getName()+ " finished." );
+	}
+	
+	
+	
+}

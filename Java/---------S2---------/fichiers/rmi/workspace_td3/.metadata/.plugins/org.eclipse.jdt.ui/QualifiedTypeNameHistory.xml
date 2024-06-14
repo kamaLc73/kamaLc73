@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="java.rmi.registry.LocateRegistry"/>
+    <fullyQualifiedTypeName name="java.rmi.Naming"/>
+    <fullyQualifiedTypeName name="rmi.RemoteHotelReservertion"/>
+    <fullyQualifiedTypeName name="beans.HotelReservation"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="beans.Personne"/>
+    <fullyQualifiedTypeName name="jdbc.DataBase"/>
+    <fullyQualifiedTypeName name="jdbc.MySQLDataSource"/>
+    <fullyQualifiedTypeName name="rmi.PersonneDaoRemote"/>
+    <fullyQualifiedTypeName name="rmi.PersonneDaoRemoteImp"/>
+    <fullyQualifiedTypeName name="java.rmi.Remote"/>
+    <fullyQualifiedTypeName name="java.rmi.RemoteException"/>
+    <fullyQualifiedTypeName name="java.rmi.server.UnicastRemoteObject"/>
+    <fullyQualifiedTypeName name="beans.Temperature"/>
+    <fullyQualifiedTypeName name="javax.sql.rowset.serial.SerialArray"/>
+    <fullyQualifiedTypeName name="java.io.Serializable"/>
+    <fullyQualifiedTypeName name="rmi.TemperatureSensorInterface"/>
+    <fullyQualifiedTypeName name="rmi.TemperatureSensor"/>
+</qualifiedTypeNameHistroy>

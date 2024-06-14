@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<produits>
+  <produit ref="1">
+    <desig>Ecran</desig>
+    <pu>3000.0</pu>
+    <qs>15.0</qs>
+  </produit>
+  <produit ref="2">
+    <desig>Clavir</desig>
+    <pu>50.0</pu>
+    <qs>30.0</qs>
+  </produit>
+  <produit ref="3">
+    <desig>souris</desig>
+    <pu>100.0</pu>
+    <qs>150.0</qs>
+  </produit>
+</produits>

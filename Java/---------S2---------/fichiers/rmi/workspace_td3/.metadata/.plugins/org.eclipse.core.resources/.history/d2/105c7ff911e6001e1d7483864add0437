@@ -1,0 +1,128 @@
+package jdbc;
+
+import java.sql.*;
+import java.util.*;
+import com.java.beans.*;
+
+import beans.Personne;
+
+public class DataBase {
+	private DataSource ds;
+	private Connection cnx;
+	
+	public DataBase() {
+	}
+
+	public DataBase(DataSource ds) {
+		this.ds = ds;
+		this.cnx = ds.getConnection();
+	}
+
+	public DataSource getDs() {
+		return ds;
+	}
+
+	public void setDs(DataSource ds) {
+		this.ds = ds;
+		this.cnx = ds.getConnection();
+	}
+	
+	public int insertPersonne(Personne p) {
+		try {
+			String req = "insert into personne values(" + p.getId() + ", '" 
+					+ p.getName() + "', " + p.getAge() +", '"+p.getAdresse()+"');" ;
+			Statement st = cnx.createStatement();
+			return st.executeUpdate(req);
+		} catch (Exception e) {
+			e.printStackTrace();
+			return -1;
+		}
+	}
+	
+	
+	
+	public Client selectClient(int id ) {
+		try {
+			String req = "select * from client where id = " + id + ";";
+			Statement st = cnx.createStatement();
+			ResultSet rs = st.executeQuery(req);
+			if(rs.first()) {
+				String nom = rs.getString(2);
+				String prenom = rs.getString(3);
+				return new Client(id, nom, prenom);
+			}
+			return null;
+		} catch (Exception e) {
+			e.printStackTrace();
+			return null;
+		}
+	}
+	
+	
+	
+	public List<Client> selectAllClients() {
+		try {
+			String req = "select * from client ;";
+			Statement st = cnx.createStatement();
+			ResultSet rs = st.executeQuery(req);
+			List<Client> clientList = new ArrayList<Client>();
+			while(rs.next()) {
+				int id = rs.getInt(1);
+				String nom = rs.getString(2);
+				String prenom = rs.getString(3);
+				clientList.add(new Client(id, nom, prenom));
+			}
+			return clientList;
+		} catch (Exception e) {
+			e.printStackTrace();
+			return null;
+		}
+	}
+	
+	public int updateClient(String[] values, String condition) {
+	    try {
+	        String req = "update client SET nom = ?, prenom = ? WHERE id = ?";
+	        PreparedStatement st = this.cnx.prepareStatement(req);
+	        st.setString(1, values[0]); 
+	        st.setString(2, values[1]); 
+	        st.setString(3, condition); 
+	        return st.executeUpdate();
+	    } catch (Exception e) {
+	        e.printStackTrace();
+	        return -1;
+	    }
+	}
+	
+	
+	    
+    public int deleteClient(int id) {
+        try {
+            String req = "delete from client where id = ? ;";  
+            PreparedStatement s = cnx.prepareStatement(req);
+            s.setInt(1, id); 
+            return s.executeUpdate();
+        } catch (Exception e) {
+            e.printStackTrace();
+            return -1;
+        }
+    }
+	
+	    
+	    
+	
+}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+
+
+
+

@@ -1,0 +1,35 @@
+package rmi;
+
+import java.rmi.RemoteException;
+import java.rmi.server.UnicastRemoteObject;
+import java.util.ArrayList;
+
+import beans.HotelReservation;
+
+public class RemoteHotelReservationImp extends UnicastRemoteObject implements RemoteHotelReservertion  {
+		
+	private ArrayList<HotelReservation> rhs = new ArrayList<HotelReservation>(); ;
+		
+	private RemoteHotelReservationImp() throws RemoteException {
+	}
+
+	@Override
+	public int reserver(HotelReservation hr) throws RemoteException {
+		
+		
+		return 0;
+	}
+
+	@Override
+	public void lister(HotelReservation hr) throws RemoteException {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public HotelReservation lister(int id) throws RemoteException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

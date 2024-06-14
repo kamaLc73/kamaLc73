@@ -1,0 +1,19 @@
+package rmi;
+
+import java.rmi.Naming;
+import java.rmi.registry.LocateRegistry;
+import beans.HotelReservation;
+
+public class Serveur_ex2 {
+	public static void main(String[] args) {
+		try {
+			LocateRegistry.createRegistry(1099);
+			RemoteHotelReservertion pr = new RemoteHotelReservertionImp();
+			System.out.println(pr);
+			Naming.rebind("rmi:// 192.168.56.1:1099/HR", pr);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+}

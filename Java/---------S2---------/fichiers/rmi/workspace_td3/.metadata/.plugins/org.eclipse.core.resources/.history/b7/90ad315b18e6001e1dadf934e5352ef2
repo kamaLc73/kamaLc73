@@ -1,0 +1,26 @@
+package beans;
+
+public class Temperature {
+	private static double temp = 0.0 ;
+	
+	public Temperature() {
+	}
+	
+	public Temperature(double temp) {
+		Temperature.temp = temp;
+	}
+
+
+	public double getTemp() {
+		return Temperature.temp;
+	}
+	public void setTemp(double temp) {
+		Temperature.temp = temp;
+	}
+
+	@Override
+	public String toString() {
+		return "Temperature [temp=" + Temperature.temp + "]";
+	}
+	
+}

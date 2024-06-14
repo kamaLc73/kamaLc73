@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="SmartImportWizard">
+		<item key="SmartImportRootWizardPage.STORE_HIDE_ALREADY_OPEN" value="false"/>
+		<item key="SmartImportRootWizardPage.STORE_CLOSE_IMPORTED" value="false"/>
+		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
+		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
+		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="C:\Users\kamal\Desktop\xml_jdom_2"/>
+			<item value="C:\Users\kamal\Desktop\-------s2-------\JAVA\Conception pour comm en JAVA\fichiers\sql\jdbc_version2"/>
+			<item value="C:\Users\kamal\Desktop\workspace_sql"/>
+			<item value="C:\Users\kamal\Desktop\devoir_JDBC_2"/>
+			<item value="C:\Users\kamal\Desktop\jdbc_date"/>
+			<item value="C:\Users\kamal\Desktop\xml_jdom"/>
+			<item value="C:\Users\kamal\Desktop\-------s2-------\JAVA\Conception pour comm en JAVA\fichiers\xml\xml_jdom"/>
+			<item value="C:\Users\kamal\Desktop\-------s2-------\JAVA\Conception pour comm en JAVA\fichiers\xml_jdom"/>
+		</list>
+	</section>
+</section>

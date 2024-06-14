@@ -1,0 +1,20 @@
+package com.java.xml;
+
+import com.java.models.*;
+
+public class Mediator {
+	
+	public Mediator() {
+	}
+
+	public Auteur getAuteur(String ref) {
+		ProduitXml xml = new ProduitXml(Constantes.PRODUITS_XML_FILEPATH);
+		return xml.select(ref);
+	}
+
+	public Ouvrage getOuvrage(int id) {
+		ClientXml xml = new ClientXml(Constantes.CLIENTS_XML_FILEPATH);
+		return xml.select(id);
+	}
+
+}

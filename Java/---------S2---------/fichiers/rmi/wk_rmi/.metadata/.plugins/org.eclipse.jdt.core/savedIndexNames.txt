@@ -1,0 +1,5 @@
+INDEX VERSION 1.131+C:\Users\kamal\Desktop\-------s2-------\JAVA\Conception pour comm en JAVA\fichiers\rmi\wk_rmi\.metadata\.plugins\org.eclipse.jdt.core
+2366354744.index
+1865797976.index
+262142283.index
+3413725848.index

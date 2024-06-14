@@ -1,0 +1,2 @@
+INDEX VERSION 1.131+C:\Users\kamal\Desktop\-------s2-------\JAVA\Conception pour comm en JAVA\fichiers\rmi\workspace_td3\.metadata\.plugins\org.eclipse.jdt.core
+1865797976.index

@@ -1,0 +1,26 @@
+package com.java.utils;
+
+import java.util.ArrayList;
+
+import com.java.models.*;
+import com.java.xml.Xml;
+
+public class Test {
+
+	public static void main(String[] args) {
+		Xml xml = new Xml(Constantes.OUVRAGE_XML_FILEPATH);
+		ArrayList<Auteur> a = new ArrayList<Auteur>();
+		Auteur a1 = new Auteur(1, "ahmed", "idrissi");
+		a.add(a1);
+		
+		
+		
+		
+		Ouvrage o = new Ouvrage(1, "math", "ensam", a ,2010);
+		System.out.println(o.ecritPar(a1));
+		
+		
+		
+		//		xml.insertOuvrage(o);
+	}
+}

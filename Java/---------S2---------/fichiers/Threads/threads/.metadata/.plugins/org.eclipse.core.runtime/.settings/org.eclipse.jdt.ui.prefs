@@ -1,0 +1,8 @@
+content_assist_lru_history=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><history maxLHS\="100" maxRHS\="10"><lhs name\="java.lang.Runnable"><rhs name\="Test.Multithreading"/><rhs name\="Test.Test_interface_Runnable"/><rhs name\="java.lang.Thread"/><rhs name\="Test.Run_interface_1"/><rhs name\="Test.Run_interface_2"/><rhs name\="Threads_Test.Join_Test"/></lhs><lhs name\="Test.Multithreading"><rhs name\="Test.Multithreading"/></lhs><lhs name\="Test.Test_interface_Runnable"><rhs name\="Test.Test_interface_Runnable"/></lhs><lhs name\="java.lang.Thread"><rhs name\="java.lang.Thread"/><rhs name\="Threads_Test.Join_Test"/></lhs><lhs name\="Test.Run_interface_1"><rhs name\="Test.Run_interface_1"/></lhs><lhs name\="Test.Run_interface_2"><rhs name\="Test.Run_interface_2"/></lhs><lhs name\="Threads_Test.Join_Test"><rhs name\="Threads_Test.Join_Test"/></lhs></history>
+content_assist_number_of_computers=12
+eclipse.preferences.version=1
+org.eclipse.jdt.ui.formatterprofiles.version=22
+spelling_locale_initialized=true
+typefilter_migrated_2=true
+useAnnotationsPrefPage=true
+useQuickDiffPrefPage=true

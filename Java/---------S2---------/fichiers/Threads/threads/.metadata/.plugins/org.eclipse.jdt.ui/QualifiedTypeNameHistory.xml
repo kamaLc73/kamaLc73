@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="javax.swing.JOptionPane"/>
+    <fullyQualifiedTypeName name="java.lang.Object"/>
+    <fullyQualifiedTypeName name="Test.Multithreading"/>
+    <fullyQualifiedTypeName name="Test.Test_interface_Runnable"/>
+    <fullyQualifiedTypeName name="Test.Run_interface"/>
+    <fullyQualifiedTypeName name="java.lang.Runnable"/>
+    <fullyQualifiedTypeName name="Test.Run_interface_1"/>
+    <fullyQualifiedTypeName name="Test.Run_interface_2"/>
+    <fullyQualifiedTypeName name="Threads_Test.Run_interface"/>
+    <fullyQualifiedTypeName name="Threads_Test.Join_Test"/>
+    <fullyQualifiedTypeName name="java.util.concurrent.ExecutionException"/>
+    <fullyQualifiedTypeName name="java.lang.InterruptedException"/>
+    <fullyQualifiedTypeName name="java.lang.Exception"/>
+    <fullyQualifiedTypeName name="java.lang.Override"/>
+    <fullyQualifiedTypeName name="java.lang.Thread"/>
+</qualifiedTypeNameHistroy>

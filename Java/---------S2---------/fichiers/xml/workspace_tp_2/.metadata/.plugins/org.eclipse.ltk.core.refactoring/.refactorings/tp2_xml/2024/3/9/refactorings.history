@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;jdom-2.0.6.1.jar&apos; to &apos;lib&apos;&#x0D;&#x0A;- Original project: &apos;tp2_xml&apos;&#x0D;&#x0A;- Destination element: &apos;lib&apos;&#x0D;&#x0A;- Original element: &apos;jdom-2.0.6.1.jar&apos;" description="Copy file" element1="lib/jdom-2.0.6.1.jar" files="1" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1709493745444" target="/xml_jdom/xml_jdom/lib" units="0" version="1.0"/>
+</session>

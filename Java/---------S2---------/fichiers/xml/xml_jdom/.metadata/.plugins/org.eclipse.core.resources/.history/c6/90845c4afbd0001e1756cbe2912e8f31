@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<produits>
+  <produit ref="1">
+    <desig>Ecran</desig>
+    <pu>400.5</pu>
+    <qs>50.0</qs>
+  </produit>
+  <produit ref="1">
+    <desig>Ecran</desig>
+    <pu>400.5</pu>
+    <qs>50.0</qs>
+  </produit>
+</produits>

@@ -1,0 +1,34 @@
+package com.java.utils;
+
+import java.util.Scanner;
+
+import com.java.beans.*;
+import com.java.xml.ProduitXml;
+
+public class Test {
+	
+	public static void main(String[] args) {
+		ProduitXml xml = new ProduitXml(Constants.PRODUITS_XML_FILEPATH);
+//		xml.insert(new Produit("3", "souris", 100, 150));
+//		Sys2tem.out.println(xml.select("2"));
+//		System.out.println(xml.selectAll());
+		
+		
+//		Produit p = new Produit("1", "Clavier", 150 , 30);
+//		xml.insert(p);
+	
+//		xml.update("2", p);	
+//		xml.delete("4");	
+//		xml.deleteAll();
+		
+		Produit p = new Produit();
+		p.creerProduit();
+		System.out.println(p.toString();
+//		xml.insert(p);
+//		System.out.println(xml.selectAll());
+	}
+	
+	
+
+
+}

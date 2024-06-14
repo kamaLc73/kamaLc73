@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;Mediator.java&apos; to &apos;tp2_xml/src/com.java.xml&apos;&#x0D;&#x0A;- Original project: &apos;xml_jdom&apos;&#x0D;&#x0A;- Destination element: &apos;tp2_xml/src/com.java.xml&apos;&#x0D;&#x0A;- Original element: &apos;com.java.xml.Mediator.java&apos;" description="Copy compilation unit" destination="=tp2_xml/src&lt;com.java.xml" element1="/xml_jdom\/src&lt;com.java.xml{Mediator.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1709495610810" units="1" version="1.0"/>
+</session>

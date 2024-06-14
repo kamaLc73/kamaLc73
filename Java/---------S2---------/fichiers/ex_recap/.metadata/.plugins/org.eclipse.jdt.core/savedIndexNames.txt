@@ -1,0 +1,4 @@
+INDEX VERSION 1.131+C:\Users\kamal\Desktop\-------s2-------\JAVA\Conception pour comm en JAVA\fichiers\ex_recap\.metadata\.plugins\org.eclipse.jdt.core
+3196206139.index
+3413725848.index
+1865797976.index

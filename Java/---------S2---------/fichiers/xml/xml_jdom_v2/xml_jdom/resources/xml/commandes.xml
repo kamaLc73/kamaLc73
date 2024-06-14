@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<commandes>
+  <commande id="1">
+    <client ref="1" />
+    <produit ref="1" />
+    <qt>6</qt>
+    <date>27/02/2024</date>
+  </commande>
+</commandes>
+

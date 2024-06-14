@@ -1,0 +1,178 @@
+package com.java.jdbc;
+
+import java.sql.*;
+import java.sql.Date;
+import java.util.*;
+import com.java.beans.*;
+
+public class DataBase {
+	private DataSource ds;
+	private Connection cnx;
+	
+	public DataBase() {
+	}
+
+	public DataBase(DataSource ds) {
+		this.ds = ds;
+		this.cnx = ds.getConnection();
+	}
+
+	public DataSource getDs() {
+		return ds;
+	}
+
+	public void setDs(DataSource ds) {
+		this.ds = ds;
+		this.cnx = ds.getConnection();
+	}
+	
+	public int insertClient(Client cl) {
+		try {
+			String req = "insert into client values(" + cl.getId() + ", '" 
+					+ cl.getNom() + "', " + cl.getPrenom() +", '"+ ");" ;
+			Statement st = cnx.createStatement();
+			return st.executeUpdate(req);
+		} catch (Exception e) {
+			e.printStackTrace();
+			return -1;
+		}
+	}
+	
+	public int insertProduit(Produit p) {
+		try {
+			String req = "insert into produit values(" + p.getRef() + ", '" 
+					+ p.getDes() + "', " + p.getPu() + "', " + p.getQs()+ ");" ;
+			Statement st = cnx.createStatement();
+			return st.executeUpdate(req);
+		} catch (Exception e) {
+			e.printStackTrace();
+			return -1;
+		}
+	}
+	
+	public int insertCommande(Commande co) {
+		try {
+			String req = "insert into commande values(" + co.getCode() + ", '" 
+					+ co.getDate() + "', " + co.getQte() + "', " + co.getClient().getId() +"', " + co.getProduit().getRef() + ");" ;
+			Statement st = cnx.createStatement();
+			return st.executeUpdate(req);
+		} catch (Exception e) {
+			e.printStackTrace();
+			return -1;
+		}
+	}
+	
+	public Client selectClient(int id ) {
+		try {
+			String req = "select * from client where id = " + id + ";";
+			Statement st = cnx.createStatement();
+			ResultSet rs = st.executeQuery(req);
+			if(rs.first()) {
+				String nom = rs.getString(2);
+				String prenom = rs.getString(3);
+				return new Client(id, nom, prenom);
+			}
+			return null;
+		} catch (Exception e) {
+			e.printStackTrace();
+			return null;
+		}
+	}
+	
+	public Produit selectProduit(int ref ) {
+		try {
+			String req = "select * from produit where ref = " + ref + ";";
+			Statement st = cnx.createStatement();
+			ResultSet rs = st.executeQuery(req);
+			if(rs.first()) {
+				String design = rs.getString(2);
+				double pu = rs.getDouble(2);
+				int qte = rs.getInt(3);
+				return new Produit(ref, design, pu,qte);
+			}
+			return null;
+		} catch (Exception e) {
+			e.printStackTrace();
+			return null;
+		}
+	}
+	
+	public Commande selectCommande(int code ) {
+		try {
+			String req = "select * from commande where code = " + code + ";";
+			Statement st = cnx.createStatement();
+			ResultSet rs = st.executeQuery(req);
+			if(rs.first()) {
+				Date date = rs.getDate(2);
+				
+				int qteComm = rs.getInt(3);
+				
+				int id_client = rs.getInt(4);
+				Client c = selectClient(id_client);
+				
+				int ref_produit = rs.getInt(5);
+				Produit p = selectProduit(ref_produit);
+				
+				return new Commande(code, date, qteComm, c, p);
+			}
+			return null;
+		} catch (Exception e) {
+			e.printStackTrace();
+			return null;
+		}
+	}
+	
+	public List<Client> selectAllClients() {
+		try {
+			String req = "select * from client ;";
+			Statement st = cnx.createStatement();
+			ResultSet rs = st.executeQuery(req);
+			List<Client> dl = new ArrayList<Client>();
+			while(rs.next()) {
+				int id = rs.getInt(1);
+				String nom = rs.getString(2);
+				String prenom = rs.getString(3);
+				dl.add(new Client(id, nom, prenom));
+			}
+			return dl;
+		} catch (Exception e) {
+			e.printStackTrace();
+			return null;
+		}
+	}
+	
+	public List<Produit> selectAllProduits() {
+		try {
+			String req = "select * from produit ;";
+			Statement st = cnx.createStatement();
+			ResultSet rs = st.executeQuery(req);
+			List<Produit> dl = new ArrayList<Produit>();
+			while(rs.next()) {
+				int ref = rs.getInt(1);
+				String design = rs.getString(2);
+				Double pu = rs.getDouble(3);
+				int qts = rs.getInt(4);
+				dl.add(new Produit(ref, design, pu, qts));
+			}
+			return dl;
+		} catch (Exception e) {
+			e.printStackTrace();
+			return null;
+		}
+	}
+}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+
+
+
+

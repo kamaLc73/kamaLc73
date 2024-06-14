@@ -1,0 +1,19 @@
+package com.java.models;
+
+import java.util.ArrayList;
+
+public class Biblio {
+	private ArrayList<Ouvrage> Ouvrages ; 
+	
+	public Biblio() {
+	}
+
+	public Biblio(ArrayList<Ouvrage> ouvrages) {
+		super();
+		Ouvrages = ouvrages;
+	}
+	
+	
+	
+	
+}

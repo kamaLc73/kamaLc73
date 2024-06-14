@@ -1,0 +1,94 @@
+package com.java.beans;
+
+import java.util.Scanner;
+
+public class Produit {
+	private String ref;
+	private String desig;
+	private double pu;
+	private double qs;
+
+	public Produit() {
+	}
+
+	public Produit(String ref, String desig, double pu, double qs) {
+		this.ref = ref;
+		this.desig = desig;
+		this.pu = pu;
+		this.qs = qs;
+	}
+
+	public String getRef() {
+		return ref;
+	}
+
+	public void setRef(String ref) {
+		this.ref = ref;
+	}
+
+	public String getDesig() {
+		return desig;
+	}
+
+	public void setDesig(String desig) {
+		this.desig = desig;
+	}
+
+	public double getPu() {
+		return pu;
+	}
+
+	public void setPu(double pu) {
+		this.pu = pu;
+	}
+
+	public double getQs() {
+		return qs;
+	}
+
+	public void setQs(double qs) {
+		this.qs = qs;
+	}
+
+	public String toString() {
+		return "Produit [ref=" + ref + ", desig=" + desig + ", pu=" + pu + ", qs=" + qs + "]";
+	}
+
+	public Produit creerProduit() {
+	    Scanner scanner = new Scanner(System.in);
+	    String ref = "";
+	    String design = "";
+	    double pu = 0.0;
+	    int qts = 0;
+
+	    try {
+	        System.out.println("Entrez la référence : ");
+	        ref = scanner.nextLine();
+
+	        System.out.println("Entrez le design : ");
+	        design = scanner.nextLine();
+
+	        System.out.println("Entrez le prix unitaire : ");
+	        pu = Double.parseDouble(scanner.nextLine());
+
+	        System.out.println("Entrez la quantité : ");
+	        qts = Integer.parseInt(scanner.nextLine());
+	        
+	    } catch (NumberFormatException e) {
+	        System.out.println("Erreur de saisie : Assurez-vous d'entrer"
+	        		+ " un nombre valide pour le prix unitaire et la quantité.");
+	        return null; 
+	    } finally {
+	        scanner.close();
+	    }
+
+	    if (ref.isEmpty() || design.isEmpty() || pu <= 0 || qts < 0) {
+	        System.out.println("Erreur : Assurez-vous de remplir "
+	        		+ "tous les champs et d'entrer des valeurs valides "
+	        		+ "pour le prix unitaire et la quantité.");
+	        return null; 
+	    }
+
+	    return new Produit(ref, design, pu, qts);
+	}
+}

@@ -1,0 +1,19 @@
+package Threads_Test;
+
+public class tst extends Thread {
+	
+	public static int x = 0;
+	
+	public static void main(String[] args) {
+		tst t = new tst();
+	 	t.start();
+	 	while(t.isAlive()) {
+	 		System.out.println(x);
+	 		x++;
+	 	}
+	 	System.out.println(x);
+	 }
+	 public void run() {
+		 x++;
+	 }
+}

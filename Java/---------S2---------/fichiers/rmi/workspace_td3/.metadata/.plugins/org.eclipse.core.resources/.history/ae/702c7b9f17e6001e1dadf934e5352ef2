@@ -1,0 +1,31 @@
+package rmi;
+
+import java.rmi.RemoteException;
+import java.rmi.server.UnicastRemoteObject;
+
+public class TemperatureSensor extends UnicastRemoteObject implements TemperatureSensorInterface {
+
+	private TemperatureSensor() throws RemoteException {
+
+	}
+
+	@Override
+	public void augmenter(double t) throws RemoteException {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void diminuer(double t) throws RemoteException {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public double lister() throws RemoteException {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+	
+
+}

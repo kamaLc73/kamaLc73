@@ -1,0 +1,38 @@
+package com.java.xml;
+
+import org.jdom2.*;
+import org.jdom2.input.SAXBuilder;
+import org.jdom2.output.Format;
+import org.jdom2.output.XMLOutputter;
+import java.io.*;
+import java.util.*;
+
+public class Xml {
+	    private String filePath;
+	    private Document doc;
+	    private Element root;
+
+	    public Xml(String filePath) {
+	        this.filePath = filePath;
+	        load();
+	    }
+
+	    private void load() {
+	        try {
+	            SAXBuilder sax = new SAXBuilder();
+	            doc = sax.build(new File(filePath));
+	            root = doc.getRootElement();
+	        } catch (Exception e) {
+	            e.printStackTrace();
+	        }
+	    }
+
+	    private void save() {
+	        try {
+	            XMLOutputter out = new XMLOutputter(Format.getPrettyFormat());
+	            out.output(doc, new FileOutputStream(filePath));
+	        } catch (Exception e) {
+	            e.printStackTrace();
+	        }
+	   }
+}

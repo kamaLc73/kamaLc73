@@ -1,0 +1,11 @@
+package Threads_Test;
+
+public class Run_interface  implements Runnable {
+	
+	public Run_interface() {
+	}
+	@Override
+	public void run(){
+		System.out.println("Hello, world!");
+	}
+}

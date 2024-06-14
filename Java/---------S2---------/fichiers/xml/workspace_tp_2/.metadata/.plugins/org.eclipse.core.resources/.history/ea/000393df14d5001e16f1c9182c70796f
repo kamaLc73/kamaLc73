@@ -1,0 +1,16 @@
+package com.java.models;
+
+import java.util.ArrayList;
+
+public class Ouvrage {
+
+	private String id ;
+	private String titre ;
+	private String maisonEdition ;
+	private ArrayList<String> listeAuteurs ;
+	private int annee ;
+	
+	
+	
+}
+ 

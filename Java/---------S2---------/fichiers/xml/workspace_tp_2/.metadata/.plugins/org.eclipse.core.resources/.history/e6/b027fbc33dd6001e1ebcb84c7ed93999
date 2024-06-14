@@ -1,0 +1,39 @@
+package com.java.utils;
+
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+
+import com.java.models.*;
+import com.java.xml.Xml;
+
+public class Test {
+
+	public static void main(String[] args) {
+		Xml xml = new Xml(Constantes.OUVRAGE_XML_FILEPATH);
+		
+		ArrayList<Auteur> a = new ArrayList<Auteur>();
+		
+		Auteur a1 = new Auteur(1, "ahmed", "idrissi");
+		a.add(a1);
+		
+		Auteur a2 = new Auteur(2,"karim","alaoui");
+		a.add(a2);
+		
+		Ouvrage o1 = new Ouvrage(1, "math", "ensam", a ,2010);
+//		System.out.println(o1.ecritPar(a2));
+		
+		Ouvrage o2 = new Ouvrage(2, "sql", "ensam", a ,2022);
+//		System.out.println(o2.ecritPar(a1));
+		
+		
+		ArrayList<Ouvrage> ouvrages = new ArrayList<Ouvrage>();
+		ouvrages.add(o1);ouvrages.add(o2);
+		
+		Biblio b = new Biblio(ouvrages);
+		
+		System.out.println(b);
+		
+		
+//		xml.insertOuvrage(o);
+	}
+}

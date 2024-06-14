@@ -1,0 +1,82 @@
+package com.java.beans;
+
+import java.util.Scanner;
+
+public class Produit {
+	private String ref;
+	private String desig;
+	private double pu;
+	private int qs;
+
+	public Produit() {
+	}
+
+	public Produit(String ref, String desig, double pu, int qs) {
+		this.ref = ref;
+		this.desig = desig;
+		this.pu = pu;
+		this.qs = qs;
+	}
+
+	public String getRef() {
+		return ref;
+	}
+
+	public void setRef(String ref) {
+		this.ref = ref;
+	}
+
+	public String getDesig() {
+		return desig;
+	}
+
+	public void setDesig(String desig) {
+		this.desig = desig;
+	}
+
+	public double getPu() {
+		return pu;
+	}
+
+	public void setPu(double pu) {
+		this.pu = pu;
+	}
+
+	public double getQs() {
+		return qs;
+	}
+
+	public void setQs(int qs) {
+		this.qs = qs;
+	}
+
+	public String toString() {
+		return "Produit [ref=" + ref + ", desig=" + desig + ", pu=" + pu + ", qs=" + qs + "]";
+	}
+
+	public Produit creerProduit() {
+	    Scanner scanner = new Scanner(System.in);
+
+	    try {
+//	        System.out.println("Entrez la référence : ");
+	        String ref = scanner.nextLine();
+
+//	        System.out.println("Entrez le design : ");
+	        String design = scanner.nextLine();
+
+//	        System.out.println("Entrez le prix unitaire : ");
+	        double pu = Double.parseDouble(scanner.nextLine());
+
+//	        System.out.println("Entrez la quantité : ");
+	        int qts = Integer.parseInt(scanner.nextLine());
+
+	        return new Produit(ref, design, pu, qts);
+	    } catch (NumberFormatException e) {
+	        System.out.println("Erreur de saisie : Assurez-vous d'entrer un nombre valide pour le prix unitaire et la quantité.");
+	        
+	    } finally {
+	        scanner.close();
+	    }
+	}
+
+}

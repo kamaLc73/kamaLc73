@@ -1,0 +1,13 @@
+package rmi;
+
+import java.rmi.Naming;
+
+public class Client_ex2 {
+	public static void main(String[] args) {
+		try {
+			RemoteHotelReservartion hr = (RemoteHotelReservartion) Naming.lookup("rmi://localhost:1099/HR");
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+}

@@ -1,0 +1,9 @@
+package com.java.utils;
+
+public interface Constantes {
+	
+	public static final String OUVRAGE_XML_FILEPATH = "/tp2_xml/resources/xml/ouvrages";
+	public static final String AUTEUR_XML_FILEPATH = "/tp2_xml/resources/xml/auteurs";
+
+		
+}

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="java.lang.String"/>
+    <fullyQualifiedTypeName name="java.lang.OutOfMemoryError"/>
+    <fullyQualifiedTypeName name="org.jdom2.input.SAXBuilder"/>
+    <fullyQualifiedTypeName name="java.lang.Object"/>
+    <fullyQualifiedTypeName name="com.java.xml.Xml"/>
+    <fullyQualifiedTypeName name="java.lang.reflect.Array"/>
+    <fullyQualifiedTypeName name="com.java.models.Ouvrage"/>
+    <fullyQualifiedTypeName name="com.java.models.Biblio"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="com.java.xml.XmlAuteur"/>
+    <fullyQualifiedTypeName name="com.java.xml.XmlOuvrage"/>
+    <fullyQualifiedTypeName name="com.java.utils.Constantes"/>
+    <fullyQualifiedTypeName name="org.jdom2.Element"/>
+    <fullyQualifiedTypeName name="com.java.models.Auteur"/>
+    <fullyQualifiedTypeName name="java.lang.Integer"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="java.util.Date"/>
+</qualifiedTypeNameHistroy>

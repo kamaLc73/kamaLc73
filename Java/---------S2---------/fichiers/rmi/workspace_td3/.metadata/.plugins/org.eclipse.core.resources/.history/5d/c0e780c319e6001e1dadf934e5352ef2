@@ -1,0 +1,14 @@
+package rmi;
+
+import java.rmi.Naming;
+
+public class client_ex1 {
+	public static void main(String[] args) {
+		try {
+			TemperatureSensorInterface tr = (TemperatureSensorInterface) Naming.lookup("rmi://localhost:1099/TR");
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+}

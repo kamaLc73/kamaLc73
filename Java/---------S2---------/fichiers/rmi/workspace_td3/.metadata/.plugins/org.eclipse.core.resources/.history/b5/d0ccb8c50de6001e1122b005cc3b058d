@@ -1,0 +1,39 @@
+package rmi;
+
+import java.rmi.RemoteException;
+import java.rmi.registry.LocateRegistry;
+
+import beans.HotelReservation;
+
+public class Serveur_ex2 {
+	public static void main(String[] args) {
+		try {
+			LocateRegistry.createRegistry(1099);
+			RemoteHotelReservertion pr = new RemoteHotelReservertionImp() {
+				
+				@Override
+				public int reserver(HotelReservation hr) throws RemoteException {
+					// TODO Auto-generated method stub
+					return 0;
+				}
+				
+				@Override
+				public HotelReservation lister(int id) throws RemoteException {
+					// TODO Auto-generated method stub
+					return null;
+				}
+				
+				@Override
+				public void annuler(int id) throws RemoteException {
+					// TODO Auto-generated method stub
+					
+				}
+			};();
+			System.out.println(pr);
+			Naming.rebind("rmi:// 192.168.56.1:1099/PR", pr);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+}

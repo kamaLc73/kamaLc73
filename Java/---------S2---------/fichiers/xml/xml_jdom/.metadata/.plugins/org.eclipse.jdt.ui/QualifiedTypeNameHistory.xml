@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="java.text.Format"/>
+    <fullyQualifiedTypeName name="org.jdom2.input.SAXBuilder"/>
+    <fullyQualifiedTypeName name="org.jdom2.output.XMLOutputter"/>
+    <fullyQualifiedTypeName name="org.jdom2.output.Format"/>
+    <fullyQualifiedTypeName name="javax.management.StringValueExp"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="org.jdom2.Element"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="java.lang.String"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="java.lang.Double"/>
+    <fullyQualifiedTypeName name="com.java.xml.ProduitXml"/>
+    <fullyQualifiedTypeName name="com.java.beans.Produit"/>
+</qualifiedTypeNameHistroy>

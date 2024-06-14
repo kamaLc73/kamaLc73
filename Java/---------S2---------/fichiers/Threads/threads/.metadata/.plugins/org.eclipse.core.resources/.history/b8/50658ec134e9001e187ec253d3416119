@@ -1,0 +1,18 @@
+package Test;
+
+public class Run_interface_2 implements Runnable{
+	public Run_interface_2() {
+	}
+	@Override
+	public void run() {
+		for (int i = 6; i <= 10; i++) {
+			System.out.println(i + " : " + Thread.currentThread().getName());
+			try {
+				Thread.sleep(1000);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		}
+	}
+
+}

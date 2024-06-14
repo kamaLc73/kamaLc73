@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ouvrages>
+  <ouvrage id="1">
+    <titre>math</titre>
+    <auteurs>[Auteur [id=1, nom=ahmed, prenom=idrissi]]</auteurs>
+    <annee>2010</annee>
+    <maison_edition>ensam</maison_edition>
+  </ouvrage>
+  <ouvrage id="1">
+    <titre>math</titre>
+    <auteurs>[Auteur [id=1, nom=ahmed, prenom=idrissi]]</auteurs>
+    <annee>2010</annee>
+    <maisonedition>ensam</maisonedition>
+  </ouvrage>
+</ouvrages>

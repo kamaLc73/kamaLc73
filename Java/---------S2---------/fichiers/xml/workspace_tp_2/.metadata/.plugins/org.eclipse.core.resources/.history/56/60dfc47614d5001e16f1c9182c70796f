@@ -1,0 +1,12 @@
+package com.java.models;
+
+public class Ouvrage {
+
+	private String id ;
+	private String titre ;
+	private String maisonEdition ;
+	private ArrayList<String> listeAuteurs ;
+	
+	
+}
+ 

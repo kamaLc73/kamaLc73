@@ -1,0 +1,7 @@
+INDEX VERSION 1.131+C:\Users\kamal\Desktop\-------s2-------\JAVA\Conception pour comm en JAVA\fichiers\xml\workspace_tp_2\.metadata\.plugins\org.eclipse.jdt.core
+4069799290.index
+3652403349.index
+1865797976.index
+2750716043.index
+3907881185.index
+1030788600.index

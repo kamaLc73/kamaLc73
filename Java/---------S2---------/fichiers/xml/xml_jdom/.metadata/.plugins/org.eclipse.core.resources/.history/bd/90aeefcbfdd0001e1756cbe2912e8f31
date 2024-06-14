@@ -1,0 +1,42 @@
+package com.java.utils;
+
+import java.util.Scanner;
+
+import com.java.beans.*;
+import com.java.xml.ProduitXml;
+
+public class Test {
+	
+	public static void main(String[] args) {
+		ProduitXml xml = new ProduitXml(Constants.PRODUITS_XML_FILEPATH);
+//		xml.insert(new Produit("3", "souris", 100, 150));
+//		Sys2tem.out.println(xml.select("2"));
+//		System.out.println(xml.selectAll());
+		
+		
+//		Produit p = new Produit("1", "Clavier", 150 , 30);
+//		xml.insert(p);
+	
+//		xml.update("2", p);	
+//		xml.delete("3");	
+		xml.deleteAll();
+			
+//		Produit p0 = new Produit("1", "Ecran", 400.50, 50);
+//		xml.insert(p0);
+		
+//		Produit p1 = new Produit("2", "Unite centrale", 700.50, 30);
+//		xml.insert(p1);
+//		
+//		Produit p2 = new Produit("3", "Clavier", 150.50, 100);
+//		xml.insert(p2);
+//		
+		
+		
+		
+		System.out.println(xml.selectAll());
+	}
+	
+	
+
+
+}

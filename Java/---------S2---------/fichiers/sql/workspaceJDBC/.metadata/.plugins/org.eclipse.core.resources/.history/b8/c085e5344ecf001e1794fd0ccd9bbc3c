@@ -1,0 +1,57 @@
+package com.java.beans;
+
+import java.util.Date;
+
+public class Commande {
+	
+	private int code;
+	private Date date;
+	private int qte;
+	private Client cl;
+	private Produit pr;
+	
+	public Commande() {
+		
+	}
+	
+	public Commande(int code, Date date, int qte, Client cl, Produit pr) {
+		this.code = code;
+		this.date = date;
+		this.qte = qte;
+		this.cl = cl;
+		this.pr = pr;
+	}
+
+	public int getCode() {
+		return code;
+	}
+
+	public void setCode(int code) {
+		this.code = code;
+	}
+
+	public Date getDate() {
+		return date;
+	}
+
+	public void setDate(Date date) {
+		this.date = date;
+	}
+
+	public int getQte() {
+		return qte;
+	}
+
+	public void setQte(int qte) {
+		this.qte = qte;
+	}
+
+	public String toString() {
+		return "Commande [code=" + code + ", date=" + date + ", qte=" + qte + ", cl=" + cl + ", pr=" + pr + "]";
+	}
+	
+	
+	
+	
+
+}
