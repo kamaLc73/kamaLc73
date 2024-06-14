@@ -1,5 +1,0 @@
-linear regression	| check
-logistic regression 	| check
-svm			| check
-naiive bayes		| check
-decision trees		|
