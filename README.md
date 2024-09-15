@@ -13,6 +13,6 @@ I'm **Kamal Dehbi**, a student specializing in Data Science, A.I., and Digital H
 
 ### Skills & Interests
 
-- **Technologies:** Python, SQL, Machine Learning, Data Analysis, React, FastAPI, SQLAlchemy
+- **Technologies:** Python, Machine Learning, Data Analysis, React, SQL
 - **Fields:** Data Science, Artificial Intelligence, Digital Health, Web Development
 - **Interests:** Exploring innovative tech solutions, improving healthcare through technology, tracking entertainment content, and staying updated with the latest industry trends.
