@@ -1,6 +1,6 @@
 ## Welcome to My GitHub Profile! 👋
 
-I'm **Kamal Dehbi**, a student specializing in Data Science, A.I., and Digital Health Engineering.
+I'm **Kamal Dehbi**, a student specializing in Data Science, AI.
 
 # 🌐 Socials:
 
