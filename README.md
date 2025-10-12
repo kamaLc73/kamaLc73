@@ -4,7 +4,7 @@ I'm **Kamal Dehbi**, a student specializing in Data Science, AI.
 
 # 🌐 Socials:
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/kamal-dehbi/) [![GitHub](https://img.shields.io/badge/GitHub-%23121011.svg?logo=github&logoColor=white)](https://github.com/kamaLc73)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/kamal-dehbi/) 
 
 # 💻 Tech Stack:
 
