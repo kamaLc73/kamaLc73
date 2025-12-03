@@ -18,7 +18,7 @@ class KamalDehbi:
         self.role = "Data Scientist & AI Engineer"
         self.education = "ENSAM Rabat, Morocco - Data Science & AI"
         self.location = "Rabat, Morocco"
-    self.interests = ["Machine Learning", "Computer Vision", "NLP", "Data Platforms", "Product Design"]
+        self.interests = ["Machine Learning", "Computer Vision", "NLP", "Data Platforms", "Product Design"]
   
     def get_stats(self):
         return {
