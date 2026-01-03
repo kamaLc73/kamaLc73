@@ -429,3 +429,8 @@ class KamalDehbi:
 <div align="center">
   <img src="https://github-contributor-stats.vercel.app/api?username=kamaLc73&limit=5&theme=dark&combine_all_yearly_contributions=true" alt="Top contributed repo"/>
 </div>
+
+---
+<div align="center">
+  <img src="https://komarev.com/ghpvc/?username=kamaLc73&style=for-the-badge&color=blue" alt="Profile views" />
+</div>
