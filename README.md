@@ -1,6 +1,10 @@
+<div align="right">
+  <img src="https://komarev.com/ghpvc/?username=kamaLc73&style=for-the-badge&color=blue" alt="Profile views" />
+</div>
+
 # Hi, I'm Kamal Dehbi 👋
 
-### Data Scientist & AI Engineer | Full-Stack Developer
+<img src="https://readme-typing-svg.herokuapp.com?font=Inter&color=FFFFFF&size=28&duration=3500&pause=800&cursor=true&cursorChar=%7C&vCenter=true&width=700&lines=Data+Scientist;Data+Engineer;AI+Engineer;RAG+%26+LLM+Engineer;Full-Stack+Developer" alt="Data roles (typing)" />
 
 *Designing AI products that are fast, reliable, and intuitive to use.*
 
@@ -12,26 +16,24 @@
 ## About Me
 
 ```python
-class KamalDehbi:
+class Kamal_Dehbi:
     def __init__(self):
         self.name = "Kamal Dehbi"
         self.role = "Data Scientist & AI Engineer"
         self.education = "ENSAM Rabat, Morocco - Data Science & AI"
         self.location = "Rabat, Morocco"
-        self.interests = ["Machine Learning", "Computer Vision", "NLP", "Data Platforms", "Product Design"]
+        self.interests = ["Machine Learning", "Computer Vision", "NLP", "Data Platforms", "Product Design", "LLM", "RAG"]
   
     def get_stats(self):
         return {
       "ai_ml_projects": "10+",
-      "products_shipped": 4,
       "technologies": "30+",
       "experience_years": "3+",
-      "accuracy_record": "98% CNN in medical imaging",
         }
   
     def current_focus(self):
         return [
-      "Operationalizing deep learning models",
+      "Operationalizing deep learning models : CV & NLP",
       "LLM + RAG workflows for multilingual data",
       "Streaming analytics with Kafka",
       "Bulletproof MLOps & deployment"
@@ -428,9 +430,4 @@ class KamalDehbi:
 
 <div align="center">
   <img src="https://github-contributor-stats.vercel.app/api?username=kamaLc73&limit=5&theme=dark&combine_all_yearly_contributions=true" alt="Top contributed repo"/>
-</div>
-
----
-<div align="center">
-  <img src="https://komarev.com/ghpvc/?username=kamaLc73&style=for-the-badge&color=blue" alt="Profile views" />
 </div>
